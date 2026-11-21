@@ -11,7 +11,6 @@
     nav { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
     a { color: inherit; }
     .meta { opacity: 0.75; font-size: 0.95rem; }
-    .note { border: 1px solid color-mix(in srgb, currentColor 25%, transparent); padding: 0.85rem 1rem; border-radius: 0.6rem; margin: 1rem 0; }
     hr { border: 0; border-top: 1px solid color-mix(in srgb, currentColor 20%, transparent); margin: 2.5rem 0; }
   </style>
 </head>
@@ -25,40 +24,30 @@
   <section id="tr" lang="tr">
     <h1>Tabuu Gizlilik Bildirimi</h1>
     <p class="meta">Son güncelleme: 21 Kasım 2026 · Uygulama: Tabuu (App Store adı: Tabuu: Laflio)</p>
-    <div class="note">
-      Bu metin kod ve mevcut mimariye göre yazılmıştır; hukuki görüş değildir.
-      Veri sorumlusunun unvanı, adresi ve iletişim e-postası bu sayfada henüz doldurulmamıştır;
-      App Store satıcı bilgisi Apple hesabınızdadır.
-    </div>
+
+    <h2>Kim</h2>
+    <p>Bu bildirimin sorumlusu Murat Kardeşler’dir (bireysel geliştirici).</p>
+    <p>İletişim: <a href="mailto:murat.kardesler3019@gmail.com">murat.kardesler3019@gmail.com</a></p>
 
     <h2>Kısaca</h2>
-    <p>Tabuu’yu oynamak için hesap açmazsın. Ad, e-posta, rehber veya mikrofon istemeyiz; GPS/konum izni açmayız. Uygulamada reklam yoktur; verini reklam veya reklam ölçümü için üçüncü taraf verisiyle eşleştirmeyiz. Desteleri indirirken teknik bağlantı ve erişim kayıtları oluşabilir.</p>
+    <p>Tabuu’yu oynamak için hesap açılmaz. Uygulama ad, e-posta, rehber veya mikrofon istemez; GPS/konum izni açmaz. Reklam yoktur; veriler reklam veya reklam ölçümü için üçüncü taraf verisiyle eşleştirilmez. Desteleri indirmek için sunucuya bağlanıldığında barındırma erişim kayıtları oluşabilir.</p>
 
-    <h2>Cihazında kalan bilgiler</h2>
-    <p>Takım adları, oyun ayarları, seçili desteler, ses/titreşim tercihleri, yarım kalan maç, indirilen desteler ve kapak önbelleği yalnızca telefonunda durur. Bunlar bize gönderilmez. Uygulamayı silince silinir.</p>
+    <h2>Cihazda kalan veriler</h2>
+    <p>Takım adları, oyun ayarları, seçili desteler, ses/titreşim tercihleri, yarım kalan maç, indirilen desteler ve kapak önbelleği yalnızca cihazda durur; uygulama veritabanına oyuncu kaydı olarak gönderilmez. Uygulama silinince cihazdaki bu veriler silinir.</p>
 
-    <h2>İnternet bağlantısı ve erişim kayıtları</h2>
-    <p>Yeni desteleri ve kapakları indirmek için barındırma hizmetimize (Supabase) bağlanırız; ücretli dosya için satın alma doğrulama sunucusuna istek atılabilir. Bu HTTP isteklerinde IP adresi, istek zamanı, yol, yanıt durumu/süresi ve standart istemci başlıkları (ör. User-Agent) alıcıya ulaşır. Sağlayıcının API erişim kayıtlarında ayrıca yaklaşık konum (ülke, şehir, bölge) görülebilir. Bunlar uygulama veritabanına oyuncu kaydı olarak yazılmaz; barındırma erişim logunda tutulur. Supabase Free planında belgelenen API ve veritabanı log saklama süresi 1 gündür; bu ifade yalnızca bu log kategorisi içindir ve tüm altyapı kayıtlarının kesin olarak 24 saatte silindiği anlamına gelmez. Ücretli indirme veya başka bir barındırma kullanılıyorsa o sağlayıcının erişim kayıtları ayrıca değerlendirilir. Log dışa aktarımı (drain) bu metinde doğrulanmış sayılmaz.</p>
-    <p>Erişim logunda saklanan ham IP, aynı ağ ucuna ait isteklerin zaman içinde ilişkilendirilmesine olanak verebilir; oyuncu hesabı açılmaz ve bu metin hesap olduğunu ima etmez. Bu kayıtlar teknik işletim ve teşhis içindir; reklam veya izleme (tracking) için kullanılmaz.</p>
-    <p>Daha önce indirdiğin destelerle internet olmadan oynayabilirsin.</p>
+    <h2>Toplanan teknik veriler (ağ)</h2>
+    <p>Uygulama yayındaki deste listesini, ücretsiz deste dosyalarını ve kapak görsellerini indirmek için Supabase barındırmasına bağlanır. Ücretli bir deste için satın alma doğrulama sunucusuna istek atılabilir.</p>
+    <p>Bu isteklerde oluşan ve barındırma erişim loglarında görülebilen veriler: IP adresi; yaklaşık konum (ülke, şehir, bölge); User-Agent gibi istemci başlıkları; istek yolu ve zamanı; yanıt durumu ve süresi. Uygulama bunları kendi veritabanına oyuncu satırı olarak yazmaz.</p>
+    <p><strong>Amaç:</strong> desteleri sunmak ve hizmeti teknik olarak işletmek / teşhis etmek (uygulama işlevi). Reklam, profilleme veya üçüncü taraf reklam ölçümü için kullanılmaz.</p>
+    <p><strong>Alıcı:</strong> barındırma sağlayıcısı Supabase (erişim logları). Satın alma ödemesi Apple tarafından işlenir; uygulama kart bilgisi görmez. Ücretli indirmede Apple’ın imzaladığı işlem kaydı doğrulama için sunucuya gönderilebilir; uygulama veritabanına yazılmaz.</p>
+    <p><strong>Yurt dışı:</strong> Supabase altyapısı Türkiye dışında veri işleyebilir. Bu bildirimde aktarım için ayrı bir hukuki dayanak metni uydurulmamıştır.</p>
+    <p><strong>Saklama:</strong> Supabase Free planında belgelenen API ve veritabanı log saklama süresi 1 gündür. Bu süre yalnızca bu log kategorisi içindir; tüm altyapı kayıtlarının 24 saatte silindiği anlamına gelmez. Cihazdaki veriler uygulama silinene kadar cihazda kalır.</p>
 
-    <h2>Satın almalar</h2>
-    <p>Ücretli desteler App Store üzerinden alınır. Ödeme bilgilerini Apple işler; biz kart bilgisi görmeyiz. Satın alınan dosyayı indirmek için uygulama, Apple’ın imzaladığı işlem kaydını (ürün kimliği + imzalı işlem) doğrulama sunucusuna gönderir. Doğrulama bellekte yapılır; işlem kaydı uygulama veritabanına yazılmaz ve yanıtta loglanmaz. Kayıtta adın veya e-postan yoktur.</p>
-
-    <h2>Yönetici paneli (oyuncu uygulaması değildir)</h2>
-    <p>İçerik yönetimi ayrı bir masaüstü/panel aracıdır. Yönetici e-postası, oturum, denetim kaydı ve erişim anahtarları yalnızca yöneticiler içindir; oyuncu uygulamasına karışmaz.</p>
-
-    <h2>Çocuklar</h2>
-    <p>Uygulama hesap istemez. App Store yaş sınıfı henüz Connect’te kesinleştirilmemişse bu madde yaş sınıfına göre güncellenir. Çocuklara özel bir hesap veya profil yoktur.</p>
-
-    <h2>Hakların</h2>
-    <p>Cihazındaki oyun verisini uygulamayı silerek kaldırabilirsin. Erişim logları sağlayıcı saklama süresine bağlıdır. KVKK/GDPR kapsamındaki başvuru yolu, veri sorumlusu iletişim bilgisiyle birlikte hukukçu onayıyla eklenecektir.</p>
+    <h2>Haklar ve başvuru</h2>
+    <p>Cihazındaki oyun verisini uygulamayı silerek kaldırabilirsin. Gizlilik talepleri için: <a href="mailto:murat.kardesler3019@gmail.com">murat.kardesler3019@gmail.com</a>. Destek: <a href="./support.html">destek sayfası</a>.</p>
 
     <h2>Değişiklikler</h2>
     <p>Bu metin değişirse yeni tarihiyle burada yayınlanır.</p>
-
-    <h2>İletişim</h2>
-    <p>Destek: <a href="./support.html">support sayfası</a>. Veri sorumlusu e-postası doldurulunca burada yer alacaktır.</p>
   </section>
 
   <hr />
@@ -66,40 +55,30 @@
   <section id="en" lang="en">
     <h1>Tabuu Privacy Notice</h1>
     <p class="meta">Last updated: 21 November 2026 · App: Tabuu (App Store name: Tabuu: Laflio)</p>
-    <div class="note">
-      This notice reflects the current code and architecture; it is not legal advice.
-      The data controller’s legal name, address and contact email are not filled in on this page yet;
-      the App Store seller identity is on your Apple developer account.
-    </div>
+
+    <h2>Who</h2>
+    <p>This notice is provided by Murat Kardeşler (individual developer).</p>
+    <p>Contact: <a href="mailto:murat.kardesler3019@gmail.com">murat.kardesler3019@gmail.com</a></p>
 
     <h2>In short</h2>
-    <p>You do not create an account to play Tabuu. We do not ask for your name, email, contacts or microphone, and we do not request GPS location permission. There are no ads, and we do not link your data with third-party data for advertising or ad measurement. Technical connection and access logs may be created when decks are downloaded.</p>
+    <p>You do not create an account to play Tabuu. The app does not ask for your name, email, contacts or microphone, and does not request GPS location permission. There are no ads, and data is not linked with third-party data for advertising or ad measurement. When decks are downloaded, hosting access logs may be created.</p>
 
-    <h2>What stays on your device</h2>
-    <p>Team names, game settings, selected decks, sound/haptics preferences, an unfinished match, downloaded decks and cover caches stay only on your phone. They are not sent to us. Deleting the app deletes them.</p>
+    <h2>Data that stays on the device</h2>
+    <p>Team names, game settings, selected decks, sound/haptics preferences, an unfinished match, downloaded decks and cover caches stay on the device only; they are not written as a player record in the app database. Deleting the app removes this on-device data.</p>
 
-    <h2>Internet connection and access logs</h2>
-    <p>The app connects to our hosting (Supabase) to download decks and covers, and may call a purchase-verification server for paid files. These HTTP requests carry an IP address, request time, path, response status/duration and standard client headers (for example User-Agent). The provider’s API access logs may also show approximate location (country, city, region). We do not write these as a player record in the app database; they are kept in hosting access logs. On Supabase Free, the documented retention for API and database logs is 1 day; that applies only to that log category and does not mean every infrastructure record is deleted after 24 hours. If a paid-download or other host is used, that provider’s access logs are assessed separately. Log drains are not treated as verified in this notice.</p>
-    <p>A retained raw IP in an access log can allow associating requests from the same network endpoint over time; the app does not create a player account and this notice does not imply one exists. These records are for operating and diagnosing the service, not for advertising or tracking.</p>
-    <p>You can play offline with decks you already downloaded.</p>
+    <h2>Technical data collected (network)</h2>
+    <p>The app connects to Supabase hosting to download the published deck catalog, free deck files and cover images. A purchase-verification server may be called for a paid deck.</p>
+    <p>Data that appears in hosting access logs for these requests: IP address; approximate location (country, city, region); client headers such as User-Agent; request path and time; response status and duration. The app does not write these as a player row in its own database.</p>
+    <p><strong>Purpose:</strong> deliver decks and operate / diagnose the service (app functionality). Not used for advertising, profiling or third-party ad measurement.</p>
+    <p><strong>Recipients:</strong> hosting provider Supabase (access logs). Apple processes payment for purchases; the app never sees card details. For paid downloads, Apple’s signed transaction may be sent to a verification server and is not stored in the app database.</p>
+    <p><strong>International:</strong> Supabase infrastructure may process data outside Türkiye. This notice does not invent a separate legal basis for transfers.</p>
+    <p><strong>Retention:</strong> On Supabase Free, the documented retention for API and database logs is 1 day. That covers only that log category; it does not mean every infrastructure record is deleted after 24 hours. On-device data remains until the app is deleted.</p>
 
-    <h2>Purchases</h2>
-    <p>Paid decks are bought through the App Store. Apple handles payment details; we never see card data. To download a paid deck, the app sends Apple’s signed transaction (product ID + JWS) to the verification server. Verification runs in memory; the transaction is not stored in the app database and is not logged in the response. It does not contain your name or email.</p>
-
-    <h2>Admin tools (not the player app)</h2>
-    <p>Content management uses a separate desktop/panel tool. Admin email, sessions, audit logs and access tokens are for administrators only and are not part of the player app.</p>
-
-    <h2>Children</h2>
-    <p>The app does not require an account. The App Store age rating will be set in App Store Connect; this section should be updated to match. There is no child-specific profile.</p>
-
-    <h2>Your rights</h2>
-    <p>You can remove on-device game data by deleting the app. Access-log retention follows the provider. Formal KVKK/GDPR request paths will be added with the controller contact after legal review.</p>
+    <h2>Rights and contact</h2>
+    <p>You can remove on-device game data by deleting the app. For privacy requests: <a href="mailto:murat.kardesler3019@gmail.com">murat.kardesler3019@gmail.com</a>. Support: <a href="./support.html">support page</a>.</p>
 
     <h2>Changes</h2>
     <p>If this notice changes, the new version is published here with its date.</p>
-
-    <h2>Contact</h2>
-    <p>Support: <a href="./support.html">support page</a>. A controller email will appear here once provided.</p>
   </section>
 </body>
 </html>
